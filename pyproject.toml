@@ -15,7 +15,7 @@ requires-python = ">=3.10"
 dependencies = []
 
 [tool.frappe]
-app_name = "basenext"
+app_name = "erpnext_pos_extensions"
 app_title = "ERPNext POS Extensions - BaseN"
 app_publisher = "Lyra Informática"
 app_email = "jmpascual@lyra-informatica.es"
