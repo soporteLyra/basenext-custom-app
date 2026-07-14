@@ -15,8 +15,5 @@ doc_events = {
     }
 }
 
-# Fixtures
 fixtures = ["Custom Field", "Custom DocPerm"]
-
-# After install
 after_install = "erpnext_pos_extensions.install.after_install"
