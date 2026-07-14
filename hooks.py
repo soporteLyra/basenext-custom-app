@@ -11,9 +11,9 @@ app_license = "MIT"
 # DocType Events
 doc_events = {
     "Sales Invoice": {
-        "before_insert": "erpnext_pos_extensions.events.sales_invoice.before_insert",
+        "before_insert": "extensions.events.sales_invoice.before_insert",
     }
 }
 
 fixtures = ["Custom Field", "Custom DocPerm"]
-after_install = "erpnext_pos_extensions.install.after_install"
+after_install = "extensions.install.after_install"
