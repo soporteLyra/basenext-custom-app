@@ -7,7 +7,7 @@ def after_install():
     _crear_cuenta_vale()
     _crear_modo_pago_vale()
     _actualizar_perfiles_pos()
-    print("✅ basenext_custom_app instalada correctamente")
+    print("✅ basenext app instalada correctamente")
 
 def _crear_cuenta_vale():
     if frappe.db.exists("Account", "Vales emitidos pendientes de canje - BaseN"):

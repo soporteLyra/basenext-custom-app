@@ -3,7 +3,7 @@ requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "erpnext-pos-extensions"
+name = "basenext"
 version = "0.1.0"
 description = "Extensiones POS para ERPNext: vales, ticket regalo y personalizaciones BaseN"
 authors = [
@@ -15,7 +15,7 @@ requires-python = ">=3.10"
 dependencies = []
 
 [tool.frappe]
-app_name = "erpnext_pos_extensions"
+app_name = "basenext"
 app_title = "ERPNext POS Extensions - BaseN"
 app_publisher = "Lyra Informática"
 app_email = "jmpascual@lyra-informatica.es"

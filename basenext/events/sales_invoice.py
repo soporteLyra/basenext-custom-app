@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-"""
-Evento before_insert en Sales Invoice.
-Al crear devolución desde POS, añade Vale + Efectivo como opciones de pago.
-"""
 
 def before_insert(doc, method):
     if doc.get("is_return") and doc.get("pos_profile"):
