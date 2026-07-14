@@ -8,12 +8,11 @@ app_description = "Extensiones POS para ERPNext: vales, ticket regalo y personal
 app_email = "jmpascual@lyra-informatica.es"
 app_license = "MIT"
 
-# DocType Events
 doc_events = {
     "Sales Invoice": {
-        "before_insert": "extensions.events.sales_invoice.before_insert",
+        "before_insert": "erpnext_pos_extensions.erpnext_pos_extensions.events.sales_invoice.before_insert",
     }
 }
 
 fixtures = ["Custom Field", "Custom DocPerm"]
-after_install = "extensions.install.after_install"
+after_install = "erpnext_pos_extensions.erpnext_pos_extensions.install.after_install"
