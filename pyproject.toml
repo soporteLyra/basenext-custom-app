@@ -13,3 +13,11 @@ license = { text = "MIT" }
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
+
+[tool.frappe]
+app_name = "erpnext_pos_extensions"
+app_title = "ERPNext POS Extensions - BaseN"
+app_publisher = "Lyra Informática"
+app_email = "jmpascual@lyra-informatica.es"
+app_license = "MIT"
+app_description = "Extensiones POS para ERPNext: vales, ticket regalo y personalizaciones BaseN"
