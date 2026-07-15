@@ -24,14 +24,14 @@ Al instalar la app, se crean automáticamente:
 
 ```bash
 # Desde el bench:
-bench get-app https://gitlab.com/lyrainformatica1/.../basenextcustomapp
-bench --site josem.z.frappe.cloud install-app erpnext_pos_extensions
+bench get-app https://github.com/soporteLyra/basenext-custom-app
+bench --site tu-sitio.frappe.cloud install-app erpnext_pos_extensions
 ```
 
 O desde Frappe Cloud Dashboard:
 1. Apps → Install from Git
-2. Pegar la URL del repositorio
-3. Seleccionar el sitio `josem.z.frappe.cloud`
+2. Pegar la URL del repositorio: `https://github.com/soporteLyra/basenext-custom-app`
+3. Seleccionar el sitio
 4. Instalar
 
 ## Desarrollo
