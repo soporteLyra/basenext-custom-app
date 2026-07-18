@@ -24,4 +24,3 @@ app_description = "Extensiones POS para ERPNext: vales, ticket regalo y personal
 
 [tool.bench.frappe-dependencies]
 frappe = ">=15.0.0"
-erpnext = ">=15.0.0"
