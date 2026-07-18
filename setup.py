@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 
 setup(
     name="erpnext_pos_extensions",
-    version="0.1.0",
+    version="0.1.1",
     description="Extensiones POS para ERPNext: vales, ticket regalo y personalizaciones BaseN",
     author="Lyra Informática",
     author_email="jmpascual@lyra-informatica.es",

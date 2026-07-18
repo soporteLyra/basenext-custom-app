@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "erpnext_pos_extensions"
-version = "0.1.0"
+version = "0.1.1"
 description = "Extensiones POS para ERPNext: vales, ticket regalo y personalizaciones BaseN"
 authors = [
     { name = "Lyra Informática", email = "jmpascual@lyra-informatica.es" }
