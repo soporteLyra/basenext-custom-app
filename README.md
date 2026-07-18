@@ -2,6 +2,8 @@
 
 Extensiones POS para ERPNext: vales, ticket regalo y personalizaciones para BaseN.
 
+> **Última actualización**: 2026-07-18 — v0.1.0
+
 ## Funcionalidades
 
 ### Vale automático en devoluciones POS
