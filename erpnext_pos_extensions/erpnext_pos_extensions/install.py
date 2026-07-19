@@ -62,3 +62,10 @@ def _actualizar_perfiles_pos():
         pos.append("payments", {"mode_of_payment": "Vale", "default": 0, "allow_in_returns": 1})
         pos.save(ignore_permissions=True)
         print(f"✅ Perfil POS '{pos_name}' actualizado con modo de pago Vale")
+
+
+@frappe.whitelist()
+def setup_vale():
+    """Ejecutar from browser: frappe.call('erpnext_pos_extensions.erpnext_pos_extensions.install.setup_vale')"""
+    after_install()
+    return "OK"
