@@ -17,5 +17,5 @@ doc_events = {
     }
 }
 
-fixtures = ["Custom Field", "Custom DocPerm", "Print Format", "Client Script", "Letter Head"]
+fixtures = ["Custom Field", "Print Format", "Client Script", "Letter Head"]
 after_install = "erpnext_pos_extensions.erpnext_pos_extensions.install.after_install"

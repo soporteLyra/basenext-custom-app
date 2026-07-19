@@ -14,6 +14,7 @@ def after_install():
 
     _crear_cuenta_vale()
     _crear_modo_pago_vale()
+    _crear_docperm()
     _actualizar_perfiles_pos()
     print("✅ App instalada correctamente")
 
@@ -35,6 +36,17 @@ def _crear_cuenta_vale():
         "is_group": 0, "account_currency": "EUR",
     }).insert(ignore_permissions=True)
     print("✅ Cuenta 'Vales emitidos pendientes de canje' creada")
+
+
+def _crear_docperm():
+    """Dar permiso de lectura en Item Price a Sales User."""
+    from frappe.core.doctype.custom_docperm.custom_docperm import add_perm
+
+    if not frappe.db.exists("Custom DocPerm", {"parent": "Sales User", "doc_type": "Item Price"}):
+        add_perm("Item Price", "Sales User", 0, read=1)
+        print("✅ Custom DocPerm: permiso de lectura en Item Price para Sales User")
+    else:
+        print("  Custom DocPerm ya existe. Saltando.")
 
 
 def _crear_modo_pago_vale():
