@@ -10,7 +10,8 @@
   "disabled": 0,
   "show_section_headings": 0,
   "line_breaks": 0,
-  "align_labels_right": 0
+  "align_labels_right": 0,
+  "doctype": "Print Format"
  },
  {
   "name": "POS Ticket 80mm - Gift",
@@ -23,7 +24,8 @@
   "disabled": 0,
   "show_section_headings": 0,
   "line_breaks": 0,
-  "align_labels_right": 0
+  "align_labels_right": 0,
+  "doctype": "Print Format"
  },
  {
   "name": "Voucher - Vale",
@@ -36,6 +38,7 @@
   "disabled": 0,
   "show_section_headings": 0,
   "line_breaks": 0,
-  "align_labels_right": 0
+  "align_labels_right": 0,
+  "doctype": "Print Format"
  }
 ]

@@ -7,7 +7,8 @@
   "fieldtype": "Data",
   "length": 40,
   "insert_after": "item_name",
-  "collapsible": 0
+  "collapsible": 0,
+  "doctype": "Custom Field"
  },
  {
   "name": "Item-genero",
@@ -16,7 +17,8 @@
   "label": "Género",
   "fieldtype": "Select",
   "options": "Hombre\nMujer\nUnisex\nNiño\nNiña",
-  "insert_after": "ref_proveedor"
+  "insert_after": "ref_proveedor",
+  "doctype": "Custom Field"
  },
  {
   "name": "Item-temporada",
@@ -25,7 +27,8 @@
   "label": "Temporada",
   "fieldtype": "Data",
   "length": 20,
-  "insert_after": "genero"
+  "insert_after": "genero",
+  "doctype": "Custom Field"
  },
  {
   "name": "Item-precio_compra",
@@ -33,7 +36,8 @@
   "fieldname": "precio_compra",
   "label": "Precio Compra",
   "fieldtype": "Currency",
-  "insert_after": "temporada"
+  "insert_after": "temporada",
+  "doctype": "Custom Field"
  },
  {
   "name": "Item-precio_tpv",
@@ -41,7 +45,8 @@
   "fieldname": "precio_tpv",
   "label": "Precio TPV",
   "fieldtype": "Currency",
-  "insert_after": "precio_compra"
+  "insert_after": "precio_compra",
+  "doctype": "Custom Field"
  },
  {
   "name": "Item-categoria",
@@ -50,7 +55,8 @@
   "label": "Categoría",
   "fieldtype": "Data",
   "length": 60,
-  "insert_after": "precio_tpv"
+  "insert_after": "precio_tpv",
+  "doctype": "Custom Field"
  },
  {
   "name": "Item-actividad",
@@ -59,7 +65,8 @@
   "label": "Actividad",
   "fieldtype": "Data",
   "length": 60,
-  "insert_after": "categoria"
+  "insert_after": "categoria",
+  "doctype": "Custom Field"
  },
  {
   "name": "Item-unidad_venta",
@@ -68,7 +75,8 @@
   "label": "Unidad Venta",
   "fieldtype": "Data",
   "length": 20,
-  "insert_after": "actividad"
+  "insert_after": "actividad",
+  "doctype": "Custom Field"
  },
  {
   "name": "Sales Invoice-custom_imprimir_ticket_regalo",
@@ -78,6 +86,7 @@
   "fieldtype": "Check",
   "insert_after": "is_pos",
   "depends_on": "eval:doc.docstatus==1",
-  "description": "Si está marcado, se abrirá el ticket regalo (sin precios) tras la venta."
+  "description": "Si está marcado, se abrirá el ticket regalo (sin precios) tras la venta.",
+  "doctype": "Custom Field"
  }
 ]
