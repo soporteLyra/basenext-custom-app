@@ -20,7 +20,9 @@ def after_install():
 
 
 def _crear_cuenta_vale():
-    if frappe.db.exists("Account", f"Vales emitidos pendientes de canje - {COMPANY}"):
+    abbr = frappe.db.get_value("Company", COMPANY, "abbr")
+    nombre_cuenta = f"Vales emitidos pendientes de canje - {abbr}"
+    if frappe.db.exists("Account", nombre_cuenta):
         return
     parent = frappe.db.get_value("Account", {
         "company": COMPANY, "root_type": "Liability",
@@ -40,7 +42,11 @@ def _crear_cuenta_vale():
 
 def _crear_docperm():
     """Dar permiso de lectura en Item Price a Sales User."""
-    from frappe.core.doctype.custom_docperm.custom_docperm import add_perm
+    try:
+        from frappe.core.doctype.custom_docperm.custom_docperm import add_perm
+    except ImportError:
+        from frappe.core.doctype.custom_docperm.custom_docperm import add_perm as _add
+        add_perm = _add
 
     if not frappe.db.exists("Custom DocPerm", {"parent": "Sales User", "doc_type": "Item Price"}):
         add_perm("Item Price", "Sales User", 0, read=1)
@@ -52,7 +58,8 @@ def _crear_docperm():
 def _crear_modo_pago_vale():
     if frappe.db.exists("Mode of Payment", "Vale"):
         return
-    cuenta = f"Vales emitidos pendientes de canje - {COMPANY}"
+    abbr = frappe.db.get_value("Company", COMPANY, "abbr")
+    cuenta = f"Vales emitidos pendientes de canje - {abbr}"
     if not frappe.db.exists("Account", cuenta):
         print(f"⚠️  Cuenta '{cuenta}' no existe. Saltando creación de modo de pago Vale.")
         return
